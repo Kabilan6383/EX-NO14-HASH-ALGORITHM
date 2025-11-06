@@ -27,9 +27,29 @@ To implement HASH ALGORITHM
 
 
 ## Program:
+~~~
+#include <stdio.h>
+
+int main() {
+    char message[100];
+    unsigned long hash = 0;
+    int i;
+
+    printf("Enter a message: ");
+    scanf("%s", message);
+    for (i = 0; message[i] != '\0'; i++) {
+        hash = hash * 31 + message[i];
+    }
+
+    printf("\nGenerated Hash Value: %lu\n", hash);
+    return 0;
+}
+~~~
 
 
 ## Output:
+
+<img width="1629" height="715" alt="Screenshot 2025-11-06 090634" src="https://github.com/user-attachments/assets/90d2eaff-9ca2-4442-9497-5be8ef7d6f3b" />
 
 ## Result:
 The program is executed successfully.
